@@ -1,23 +1,8 @@
-function deleteInvalids(array) {
-  if (!Array.isArray(array)) {
-    return "Invalid input";
-  }
-  const result = array.filter((element) => {
-    return typeof element === "number" && !isNaN(element);
-  });
+function calculateMoney(ticketSale) {
 
-  return result;
+
+  const securityGuardExpense = 500;
+  const lunchExpense = 8 * 50;
+
+
 }
-
-console.log(
-  deleteInvalids([
-    1,
-    2815,
-    -302,
-    null,
-    "hello",
-    NaN,
-    [1, 2, 3],
-    { name: "sohelRana" },
-  ])
-);
