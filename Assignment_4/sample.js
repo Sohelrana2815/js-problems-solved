@@ -60,3 +60,21 @@
 //   return result;
 // }
 
+// Check own property
+
+function password(obj) {
+  // Check if obj has all the property or not
+
+  if (
+    !obj.hasOwnProperty("name") ||
+    !obj.hasOwnProperty("birthYear") ||
+    !obj.hasOwnProperty("siteName")
+  ) {
+    return "Invalid";
+  }
+
+
+  
+}
+
+password(121);
