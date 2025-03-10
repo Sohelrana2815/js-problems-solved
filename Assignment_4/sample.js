@@ -46,30 +46,17 @@
 
 // No.3 solution
 
-// function deleteInvalids(input) {
-//   // Check if the input is an array
-
-//   if (!Array.isArray(input)) {
+// function deleteInvalids(arr) {
+//   if (!Array.isArray(arr)) {
 //     return "Invalid Array";
 //   }
 
-//   const result = input.filter((element) => {
-//     return typeof element === "number" && !isNaN(element);
+//   // Filter it
+
+//   const result = arr.filter((element) => {
+//     return typeof element === "number" && !Number.isNaN(element);
 //   });
+
 //   return result;
 // }
-
-// // console.log(
-// //   deleteInvalids([
-// //     123,
-// //     { price: 12, address: "Dhaka" },
-// //     null,
-// //     undefined,
-// //     "hello world!",
-// //     1,
-// //     2815,
-// //   ])
-// // );
-// console.log(deleteInvalids({ num: [1, 2, 3] }));
-
 
