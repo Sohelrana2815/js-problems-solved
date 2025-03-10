@@ -73,8 +73,37 @@ function password(obj) {
     return "Invalid";
   }
 
+  // Check name and site name string or not
 
-  
+  if (
+    typeof obj.name !== "string" ||
+    typeof obj.siteName !== "string" ||
+    obj.siteName.length === 0
+  ) {
+    return "Invalid";
+  }
+
+  // Check birthYear is a valid 4-digit integer
+
+  const birthYear = obj.birthYear;
+
+  if (
+    typeof birthYear !== "number" ||
+    isNaN(birthYear) ||
+    !Number.isInteger(birthYear) ||
+    String(birthYear).length !== 4
+  ) {
+    return "Invalid";
+  }
+
+  // Formatted the site name: capitalize first letter, lowercase the rest
+
+  const formattedSiteName =
+    obj.siteName.charAt(0).toUpperCase() + obj.siteName.slice(1).toLowerCase();
+
+  // Generate the password string
+
+  return `${formattedSiteName}#${obj.name}@${obj.birthYear}`;
 }
 
-password(121);
+console.log(password({ name: "toky", birthYear: 200, siteName: "Facebook" }));
