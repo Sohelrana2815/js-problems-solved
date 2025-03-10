@@ -14,3 +14,32 @@ function calculateMoney(ticketSale) {
 }
 
 // console.log(calculateMoney(0));
+
+// No.2 solution
+
+function checkName(name) {
+  if (typeof name !== "string" || name === "") {
+    return "Name should string.";
+  }
+  const goodNameCharacters = ["a", "e", "i", "o", "u", "w", "y"];
+
+  const lastCharacter =
+    name.length > 0 ? name[name.length - 1].toLocaleLowerCase() : "";
+
+  let isGoodName = false;
+
+  for (let i = 0; i < goodNameCharacters.length; i++) {
+    if (goodNameCharacters[i] === lastCharacter) {
+      isGoodName = true;
+      break;
+    }
+  }
+
+  if (isGoodName) {
+    return "GoodName";
+  } else {
+    return "Bad Name";
+  }
+}
+
+console.log(checkName(""));
