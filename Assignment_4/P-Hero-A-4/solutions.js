@@ -33,8 +33,5 @@ function deleteInvalid(input) {
   if (!Array.isArray(input)) {
     return "Invalid Array";
   }
-
   return input.filter((item) => typeof item === "number" && !isNaN(item));
 }
-
-console.log(deleteInvalid({num: [ 1 , 2 , 3 ]} ));
